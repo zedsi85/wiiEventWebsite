@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)\\.(jsx)",
+      "headers": [{ "key": "Content-Type", "value": "text/babel; charset=utf-8" }]
+    }
+  ]
+}

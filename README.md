@@ -12,12 +12,37 @@ CDN — no build step). Serve the folder over HTTP and open the page:
 
 ```bash
 python3 -m http.server 8000
-# then open: http://localhost:8000/Wii%20Event%20Website%20Wireframe.html
+# then open: http://localhost:8000/
 ```
 
 > Opening the file directly with `file://` will not work — the browser blocks the
 > in-browser Babel transform and `fetch` of the `.jsx`/asset files. Use a local
 > HTTP server.
+
+## Deploying to Vercel
+
+This is a zero-build static site, so it deploys as-is — no framework, no install,
+no build command.
+
+**From the dashboard:** import the GitHub repo at
+[vercel.com/new](https://vercel.com/new), leave Framework Preset as **Other** and
+the Build/Install commands empty, and deploy. `index.html` is served at `/`.
+
+**From the CLI:**
+
+```bash
+npm i -g vercel
+vercel        # preview deploy
+vercel --prod # production deploy
+```
+
+`vercel.json` enables clean URLs and serves the `.jsx` files with a `text/babel`
+content type so the in-browser Babel transform picks them up.
+
+> Note: React, Babel, and Lucide are loaded from a public CDN at runtime, so the
+> deployed page needs the visitor's browser to reach `unpkg.com`. If you'd rather
+> vendor those locally or pre-build a bundle for offline/production hardening, that
+> can be done as a follow-up.
 
 ## What's in it
 
@@ -44,7 +69,8 @@ panel.
 ## Structure
 
 ```
-Wii Event Website Wireframe.html   # entry point
+index.html                         # entry point (served at / on Vercel)
+vercel.json                        # static deploy config (clean URLs, .jsx mime)
 css/wireframe.css                  # wireframe layout + animated background system
 js/                                # React (Babel) section components
 tweaks-panel.jsx                   # the Tweaks shell
