@@ -1,0 +1,35 @@
+/* ============================================================
+   WII EVENT — RADIUS & ELEVATION TOKENS
+   Smooth rounded cards; layered, soft shadows on light,
+   glow-tinted elevation on dark.
+   ============================================================ */
+:root {
+  /* ---- Border radius ---- */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;    /* inputs, chips */
+  --radius-lg: 20px;    /* cards */
+  --radius-xl: 28px;    /* feature cards, media blocks */
+  --radius-2xl: 36px;   /* hero panels */
+  --radius-pill: 999px; /* buttons, tags */
+
+  /* ---- Border widths ---- */
+  --border-hair: 1px;
+  --border-bold: 2px;
+
+  /* ---- Elevation (light context) ---- */
+  --shadow-xs: 0 1px 2px rgba(11,11,13,0.06);
+  --shadow-sm: 0 2px 8px rgba(11,11,13,0.06), 0 1px 2px rgba(11,11,13,0.05);
+  --shadow-md: 0 8px 24px rgba(11,11,13,0.08), 0 2px 6px rgba(11,11,13,0.05);
+  --shadow-lg: 0 18px 48px rgba(11,11,13,0.12), 0 4px 12px rgba(11,11,13,0.06);
+  --shadow-xl: 0 32px 80px rgba(11,11,13,0.18), 0 8px 24px rgba(11,11,13,0.08);
+
+  /* ---- Glow accents (use sparingly on CTAs / active) ---- */
+  --glow-voltage: 0 8px 30px rgba(84,102,255,0.35);
+  --glow-pulse: 0 8px 30px rgba(255,46,154,0.30);
+  --glow-champagne: 0 8px 28px rgba(217,178,106,0.30);
+
+  /* ---- Ring (focus / selected) ---- */
+  --ring-focus: 0 0 0 3px var(--voltage-050), 0 0 0 5px rgba(84,102,255,0.45);
+  --ring-selected: 0 0 0 2px var(--voltage-500);
+}

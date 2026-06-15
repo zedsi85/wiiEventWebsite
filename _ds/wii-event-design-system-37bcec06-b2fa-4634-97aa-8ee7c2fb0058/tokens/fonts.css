@@ -1,0 +1,12 @@
+/* ============================================================
+   WII EVENT — WEBFONTS
+   SUBSTITUTION NOTE: No brand font binaries were supplied.
+   These Google Fonts are chosen to match the poster identity
+   (heavy editorial grotesque display + clean geometric body
+   + technical mono for eyebrows). Swap for licensed brand
+   fonts when available — keep the role mapping in typography.css.
+     · Display / headings  → Archivo  (heavy, poster-grade)
+     · Body / UI           → Manrope  (clean, modern, neutral)
+     · Eyebrow / technical → Space Mono (digital, tech-enabled)
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');

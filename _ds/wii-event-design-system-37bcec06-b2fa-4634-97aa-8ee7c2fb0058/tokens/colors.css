@@ -1,0 +1,112 @@
+/* ============================================================
+   WII EVENT — COLOR TOKENS
+   Premium event-tech marketplace. Deep ink, warm ivory,
+   charcoal surfaces, controlled stage-light accents.
+   ============================================================ */
+:root {
+  /* ---- Ink / near-black (premium identity) ---- */
+  --ink-900: #0B0B0D;   /* brand black, hero & dark sections */
+  --ink-800: #111114;
+  --ink-700: #15151A;   /* primary dark surface */
+  --ink-600: #1C1C22;   /* dark card */
+  --ink-500: #26262E;   /* dark card raised / borders on dark */
+  --ink-400: #34343E;
+
+  /* ---- Neutral / charcoal → ivory ramp ---- */
+  --neutral-900: #18181C;
+  --neutral-700: #3A3A42;
+  --neutral-600: #56565F;
+  --neutral-500: #76767F;   /* muted text */
+  --neutral-400: #9A9AA2;
+  --neutral-300: #C4C2BC;
+  --neutral-200: #E2DFD8;   /* hairline on light */
+  --neutral-150: #ECE9E2;
+  --neutral-100: #F4F1EA;   /* warm ivory — primary light bg */
+  --neutral-050: #FAF8F3;   /* lightest ivory */
+  --white: #FFFFFF;
+
+  /* ---- Accent: Voltage (electric indigo) — primary action/active ---- */
+  --voltage-700: #2C36C9;
+  --voltage-600: #3D49E8;
+  --voltage-500: #5466FF;   /* core */
+  --voltage-400: #7C8AFF;
+  --voltage-200: #C3CAFF;
+  --voltage-050: #EEF0FF;
+
+  /* ---- Accent: Pulse (neon magenta) — live/festival energy, gradients ---- */
+  --pulse-600: #D81E86;
+  --pulse-500: #FF2E9A;   /* core */
+  --pulse-400: #FF66B6;
+  --pulse-050: #FFEAF4;
+
+  /* ---- Accent: Champagne (warm gold) — luxe highlights, premium badges ---- */
+  --champagne-700: #B68A3E;
+  --champagne-500: #D9B26A;   /* core */
+  --champagne-300: #ECD6A6;
+  --champagne-050: #F8F1E2;
+
+  /* ---- Support: status ---- */
+  --success-500: #2FB67A;
+  --success-050: #E7F6EE;
+  --warning-500: #E8A33D;
+  --warning-050: #FBF1DF;
+  --danger-500: #E5484D;
+  --danger-050: #FCECEC;
+
+  /* ---- Signature gradients (stage lighting) ---- */
+  --grad-stage: linear-gradient(105deg, #5466FF 0%, #A23DFF 48%, #FF2E9A 100%);     /* @kind other */
+  --grad-stage-soft: linear-gradient(135deg, rgba(84,102,255,0.18) 0%, rgba(255,46,154,0.16) 100%); /* @kind other */
+  --grad-spotlight: radial-gradient(120% 120% at 50% 0%, rgba(84,102,255,0.35) 0%, rgba(11,11,13,0) 60%); /* @kind other */
+  --grad-champagne: linear-gradient(110deg, #ECD6A6 0%, #D9B26A 100%);              /* @kind other */
+  --grad-ink-fade: linear-gradient(180deg, rgba(11,11,13,0) 0%, rgba(11,11,13,0.85) 100%); /* @kind other */
+
+  /* ============================================================
+     SEMANTIC ALIASES — light context (default)
+     ============================================================ */
+  --bg-page: var(--neutral-100);
+  --bg-page-alt: var(--neutral-050);
+  --surface-card: var(--white);
+  --surface-sunken: var(--neutral-150);
+  --surface-dark: var(--ink-900);
+
+  --text-strong: var(--ink-900);
+  --text-body: #2A2A30;
+  --text-muted: var(--neutral-500);
+  --text-on-dark: var(--neutral-100);
+  --text-on-dark-muted: #A7A7AF;
+  --text-on-accent: var(--white);
+
+  --border-subtle: var(--neutral-200);
+  --border-strong: var(--ink-900);
+  --border-on-dark: rgba(255,255,255,0.12);
+
+  --action-primary: var(--ink-900);
+  --action-primary-hover: #25252C;
+  --action-accent: var(--voltage-500);
+  --action-accent-hover: var(--voltage-600);
+
+  --focus-ring: var(--voltage-500);
+}
+
+/* ============================================================
+   DARK CONTEXT — apply on hero / premium dark sections
+   ============================================================ */
+.wii-dark,
+[data-theme="dark"] {
+  --bg-page: var(--ink-900);
+  --bg-page-alt: var(--ink-800);
+  --surface-card: var(--ink-600);
+  --surface-sunken: var(--ink-800);
+  --surface-dark: var(--ink-900);
+
+  --text-strong: var(--white);
+  --text-body: #D7D7DB;
+  --text-muted: #8E8E97;
+  --text-on-dark: var(--neutral-100);
+
+  --border-subtle: rgba(255,255,255,0.10);
+  --border-strong: rgba(255,255,255,0.85);
+
+  --action-primary: var(--white);
+  --action-primary-hover: #ECECEC;
+}
